@@ -1,0 +1,112 @@
+  
+
+  Quest:-  Give an example where call apply bind is. required?
+  Ans:- Call apply bind are help to barrowing the function one object to another 
+  objects .Call and apply similar but syntaxtly different .In case of bind it is
+  bind the function and return a fuctions otherhand call and apply directly 
+  return the functions;
+  a.“this” always refers to an object.
+  b. “this” refers to an object which calls the function it contains.
+  c.In the global context “this” refers to either window object or is undefined if the ‘strict mode’ is used.
+
+
+   function detailFun(city,state){
+      console.log(this.firstname+' '+this.lastname +" "+city +" "+state);
+  }
+
+   let obj1={
+       firstname:"Gyan",
+       lastname:"Maurya"
+   }
+   let obj2={
+       firstname:"Rohit",
+       lastname:"Sharma"
+   }
+   let printname=detailFun.call(obj1,"allahabad","Up")
+   let printname1=detailFun.call(obj2,"allahabad72","Up70")
+   let printname2=detailFun.apply(obj2,["allahabad80","Up73"])
+   let printname3=detailFun.apply(obj1,["allahabad899","Up33u"])
+   let printname4=detailFun.bind(obj1,["allahabad89966","Up3344u"])
+   printname4();
+
+
+
+   Ques:- What is the difference between readFile and readFileSync?
+   Ans:-The fs.readFileSync() method is an inbuilt application programming interface of fs module which is used to read the file and return its content. 
+    In fs.readFile() method, we can read a file in a non-blocking asynchronous way, but in fs.readFileSync() method, we can read files in a synchronous way, 
+    i.e. we are telling node.js to block other parallel process and do the current file reading process. That is, 
+    when the fs.readFileSync() method is called the original node program stops executing, and node waits for the fs.readFileSync() function to get executed, 
+    after getting the result of the method the remaining node program is executed.
+
+    Ques:-What does process in node.js mean?
+    Ans:-A process object is a global object, so it can be accessed from anywhere. 
+    As it is a predefined library, so we don’t have to download it to our system globally.
+    var process = require('process');
+    process.cwd() this is current working directory;
+    process.version this show the version of process etc.
+
+
+
+    Ques:-What is the difference of JS from browser to JS on node.js;
+    Node js is a run time enviroments which help to run javascripts by using different-different package and module and it is not provide any kind of UI , 
+    Node js made by using of chrom v8 Engin run time enviroments.
+    In case of browser which help to run javascripts langauge and also provide UI It can different runtime like fir-fox(spider Monkey)Safari(javscripts core)Google chrom(V8).
+
+    Ques:-Write three different ways to reverse a string in Javascript? a. using inbuilt method, b. iteratively, c. recursively
+    Ans:-
+    In case of Inbuilt three things happen 1. Splilt 2.Revese array 3. join the array
+    function reverseString(str) {
+    return str.split("").reverse().join("");
+    }
+
+   iteratively:Using for loop and store another variable and print;
+   function reverseString(str){
+       let newStr='';
+       for(let i=0;i<str.length;i++){
+           newStr+=str[i];
+       }
+       return newStr;
+   }
+
+
+   recursively:
+   function reverseString(str) {
+  if (str === "")
+    return "";
+  else
+    return reverseString(str.substr(1)) + str.charAt(0);
+}
+reverseString("hello");
+
+   reverseString("hello");
+
+    Ques:-Write a program to check two objects are equal ( deep equal )
+    Ans:- Two empty object are not equal like {}==={}  ==>False;
+    Because there memory alocation are difference;
+     Although equals() method can be used to compare the values of two strings, 
+     it is not really useful by default to compare two objects without overriding it.
+
+    Ques:-What is shallow equal?
+    Ans:- If two object key value pair are same then its called shallow comparison and also order is same,
+    obj1={
+        name:'gyan',
+        age:23
+    }
+    obj2={
+        name:'gyan',
+        age:23
+    }
+    obj2={
+        age:23,
+        name:'gyan',
+        
+    }
+    Here obj1===obj2   ==> True;
+    Here obj1===obj3   ==> False;
+
+
+
+
+    // Promisess
+
+    

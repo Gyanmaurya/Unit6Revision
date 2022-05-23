@@ -1,0 +1,61 @@
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   </head>
+   <body>
+      
+   </body>
+   </html>
+   <script>
+
+     //https://github.com/ysfxix/parking-api
+
+  // Promis return two fuction resolve and reject if im getting some thing then resolve(.then) otherwise reject (.catch)
+
+
+    // function prom (flag){
+   
+    //   return new Promise(function(resolve,reject){
+    //   console.log("Data fetching")
+    //     setTimeout(()=>{
+
+    //       if(flag){
+    //       resolve('Success')
+    //     }
+    //     else{
+    //       reject("Failed")
+    //     }
+    //     },3000)
+
+    //   })
+
+    // }
+    
+
+    //  prom(true).then((res)=>(console.log(res))
+    //   ).catch((err)=>(console.log(err))
+    //   )
+
+
+
+      // async fuction which is return promises diff b/w normal and async fun
+      // if promis resolve .then automatically call if promise reject then .catch call automatically
+      //we use async beacuse in case of promise we need to return two function inside then or catch but in case of
+      // async we no need these 
+
+   async function test(){
+     return "Gyan"
+   }
+   test().then((res)=>(console.log(res)))
+   console.log(test())
+
+//here not required to write reject or resolve just write async before function
+
+ 
+  </script>
