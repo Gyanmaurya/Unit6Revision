@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#filter-container{
+    display: flex;
+    padding: 2%;
+    gap: 2%;
+    color: black;
+    background-image: url("https://codejudge-question-artifacts-dev.s3.amazonaws.com/q-795/bg-header-desktop.svg");
+    object-fit: fill;
+}
+
+.filterBox{
+    flex: 1;
+}
+.job-list>div{
+    display: flex;
+    align-items: center;
+}
+.job-list>div>div{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+.detail{
+    
+    justify-content: space-around;
+
+}
+.technology{
+    border-right: 1px solid gray;
+    margin-right: 5px;
+}
+.tech :nth-last-child(1){
+    border: none;
+}
+#container{
+    background-color: aquamarine;
+}
+.job-list{
+    background-color: aquamarine;
+    width: 90%;
+    margin: auto;
+}
+.job-list>div{
+    background-color: white;
+    padding: 1%;
+    margin: 2% 0;
+}
+.detail>span{
+    background-color: aquamarine;
+    margin-right: 5%;
+    /* padding: 1%; */
+}
