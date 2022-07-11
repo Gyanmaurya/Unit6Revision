@@ -35,7 +35,7 @@ window.location.href="search.html";
 }
 
 function display(fun , delay){
-    
+    // trotalling code
     setTimeout(()=>{
     fun();
     },delay)
